@@ -9,21 +9,14 @@ public class If10 {
         System.out.print("Masukkan angka hari: ");
         angkaHari = sc.nextByte();
 
-        switch (angkaHari) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-                dayType ="weekday";
-                break;
-            case 6:
-            case 7:
-                dayType ="weekend";
-                break;
-            default:
-                dayType = "invalid day name";
+        if (angkaHari >=1 && angkaHari <=5) {
+            dayType = "weekday";
+        } else if (angkaHari >=6 && angkaHari <=7) {
+            dayType = "weekend";
+        } else {
+            dayType = "invalid";
         }
+        
         System.out.println(angkaHari + " is a " + dayType);
     }
 }
